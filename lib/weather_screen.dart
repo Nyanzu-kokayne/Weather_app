@@ -1,6 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:weather_app/addition_info.dart';
+import 'package:weather_app/weather_item.dart';
 
 class WeatherScreen extends StatelessWidget {
   const WeatherScreen({super.key});
@@ -75,227 +77,36 @@ class WeatherScreen extends StatelessWidget {
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    SizedBox(
-                      width: 100,
-                      child: Card(
-                        shadowColor: const Color.fromARGB(255, 165, 164, 163),
-                        elevation: 5,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Text(
-                                "09:00",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                ),
-                              ),
-
-                              SizedBox(height: 5),
-
-                              Icon(Icons.cloud, size: 30),
-
-                              SizedBox(height: 5),
-
-                              Text("301.17"),
-                            ],
-                          ),
-                        ),
-                      ),
+                    WeatherforecstItem(
+                      time: "9:10",
+                      icon: Icons.cloud,
+                      value: "300.15",
                     ),
-
-                    SizedBox(width: 5),
-
-                    SizedBox(
-                      width: 100,
-                      child: Card(
-                        shadowColor: const Color.fromARGB(255, 165, 164, 163),
-                        elevation: 5,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Text(
-                                "10:25",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                ),
-                              ),
-
-                              SizedBox(height: 5),
-
-                              Icon(Icons.cloud, size: 30),
-
-                              SizedBox(height: 5),
-
-                              Text("291.17"),
-                            ],
-                          ),
-                        ),
-                      ),
+                    SizedBox(width: 8),
+                    WeatherforecstItem(
+                      time: "10:10",
+                      icon: Icons.sunny,
+                      value: "315.18",
                     ),
-
-                    SizedBox(width: 5),
-
-                    SizedBox(
-                      width: 100,
-                      child: Card(
-                        shadowColor: const Color.fromARGB(255, 165, 164, 163),
-                        elevation: 5,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Text(
-                                "11:00",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                ),
-                              ),
-
-                              SizedBox(height: 5),
-
-                              Icon(Icons.cloud, size: 30),
-
-                              SizedBox(height: 5),
-
-                              Text("287.74"),
-                            ],
-                          ),
-                        ),
-                      ),
+                    SizedBox(width: 8),
+                    WeatherforecstItem(
+                      time: "14:10",
+                      icon: Icons.sunny,
+                      value: "285.65",
                     ),
-
-                    SizedBox(width: 5),
-
-                    SizedBox(
-                      width: 100,
-                      child: Card(
-                        shadowColor: const Color.fromARGB(255, 165, 164, 163),
-                        elevation: 5,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Text(
-                                "12:30",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                ),
-                              ),
-
-                              SizedBox(height: 5),
-
-                              Icon(Icons.cloud, size: 30),
-
-                              SizedBox(height: 5),
-
-                              Text("251.18"),
-                            ],
-                          ),
-                        ),
-                      ),
+                    SizedBox(width: 8),
+                    WeatherforecstItem(
+                      time: "15:10",
+                      icon: Icons.cloud,
+                      value: "315.05",
                     ),
-
-                    SizedBox(width: 5),
-
-                    SizedBox(
-                      width: 100,
-                      child: Card(
-                        shadowColor: const Color.fromARGB(255, 165, 164, 163),
-                        elevation: 5,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Text(
-                                "13:00",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                ),
-                              ),
-
-                              SizedBox(height: 5),
-
-                              Icon(Icons.cloud, size: 30),
-
-                              SizedBox(height: 5),
-
-                              Text("296.35"),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    SizedBox(width: 5),
-
-                    SizedBox(
-                      width: 100,
-                      child: Card(
-                        shadowColor: const Color.fromARGB(255, 165, 164, 163),
-                        elevation: 5,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Text(
-                                "14:15",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                ),
-                              ),
-
-                              SizedBox(height: 5),
-
-                              Icon(Icons.cloud, size: 30),
-
-                              SizedBox(height: 5),
-
-                              Text("253.56"),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    SizedBox(width: 5),
-
-                    SizedBox(
-                      width: 100,
-                      child: Card(
-                        shadowColor: const Color.fromARGB(255, 165, 164, 163),
-                        elevation: 5,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Text(
-                                "16:45",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                ),
-                              ),
-
-                              SizedBox(height: 5),
-
-                              Icon(Icons.cloud, size: 30),
-
-                              SizedBox(height: 5),
-
-                              Text("311.78"),
-                            ],
-                          ),
-                        ),
-                      ),
+                    SizedBox(width: 8),
+                    WeatherforecstItem(
+                      time: "19:10",
+                      icon: Icons.cloud,
+                      value: "305.01",
                     ),
                   ],
                 ),
@@ -311,84 +122,22 @@ class WeatherScreen extends StatelessWidget {
               SizedBox(height: 10),
 
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Card(
-                    child: SizedBox(
-                      width: 100,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Icon(Icons.water_drop_rounded, size: 30),
-
-                            SizedBox(height: 10),
-
-                            Text(
-                              "Humidity",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-
-                            SizedBox(height: 10),
-
-                            Text("94"),
-                          ],
-                        ),
-                      ),
-                    ),
+                  AdditionalInformationItems(
+                    icon: Icons.water_drop,
+                    label: "Humidity",
+                    value: "91",
                   ),
-
-                  SizedBox(width: 10),
-
-                  Card(
-                    child: SizedBox(
-                      width: 100,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Icon(Icons.air, size: 30),
-
-                            SizedBox(height: 10),
-
-                            Text(
-                              "Wind Speed",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-
-                            SizedBox(height: 10),
-
-                            Text("94"),
-                          ],
-                        ),
-                      ),
-                    ),
+                  AdditionalInformationItems(
+                    icon: Icons.air,
+                    label: "Wind Speed",
+                    value: "71",
                   ),
-
-                  SizedBox(width: 10),
-
-                  Card(
-                    child: SizedBox(
-                      width: 100,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Icon(Icons.beach_access, size: 30),
-
-                            SizedBox(height: 10),
-
-                            Text(
-                              "Pressure",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-
-                            SizedBox(height: 10),
-
-                            Text("94"),
-                          ],
-                        ),
-                      ),
-                    ),
+                  AdditionalInformationItems(
+                    icon: Icons.beach_access,
+                    label: "Preesure",
+                    value: "72",
                   ),
                 ],
               ),
